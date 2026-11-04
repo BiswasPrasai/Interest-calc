@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compound Interest Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h1>Compound Interest</h1>
+       
+        <div class="calculator-type">
+
+            <a href="simple_interest.html" class="type-link">
+                Simple Interest
+            </a>
+
+            <a href="compound_interest.html" class="type-link active">
+                Compound Interest
+            </a>
+
+        </div>
+
+
+
+        <!-- Principal -->
+        <div class="input-group">
+            <label for="principal">Principal Amount</label>
+
+            <div class="input-box">
+                <span>₹</span>
+                <input 
+                    type="number" 
+                    id="principal" 
+                    placeholder="Enter principal amount"
+                    min="0"
+                >
+            </div>
+        </div>
+
+
+        <!-- Interest Rate -->
+        <div class="input-group">
+            <label for="rate">Interest Rate</label>
+
+            <div class="input-box">
+                <input 
+                    type="number" 
+                    id="rate" 
+                    placeholder="Enter interest rate"
+                    min="0"
+                >
+                <span>%</span>
+            </div>
+        </div>
+
+
+        <!-- Time -->
+        <div class="input-group">
+            <label>Time</label>
+
+            <div class="time-inputs">
+
+                <!-- Years -->
+                <div class="input-box">
+                    <input type="number" id="time" placeholder="0" min="0">
+                    <span>Years</span>
+                </div>
+
+                <!-- Months -->
+                <div class="input-box">
+                    <input type="number" id="months" placeholder="0" min="0" max="11">
+                    <span>Months</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Compounding Frequency -->
+        <div class="input-group">
+            <label for="frequency">Compounding Frequency</label>
+
+            <div class="input-box">
+                <select id="frequency">
+
+                    <option value="1">Annually</option>
+                    <option value="2">Half-Yearly</option>
+                    <option value="3">Quarterly</option>
+
+                </select>
+            </div>
+        </div>
+
+
+        <!-- Error -->
+        <div>
+            <p id="error"></p>
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button 
+                type="button" 
+                id="main-btn" 
+                onclick="calculateCompoundInterest()"
+            >
+                Calculate
+            </button>
+
+            <button 
+                type="button" 
+                id="reset-btn" 
+                onclick="resetCalculator()"
+            >
+                Reset
+            </button>
+
+        </div>
+
+
+        <!-- Result -->
+        <div class="result" id="result">
+
+            <div class="result-item">
+                <span>Interest Earned</span>
+                <strong id="interestResult">₹ 0.00</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Total Amount</span>
+                <strong id="amountResult">₹ 0.00</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="compound_interest.js"></script>
+
+</body>
+</html>

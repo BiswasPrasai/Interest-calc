@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simple Interest Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <div class="header">
+        <span class="badge">FINANCE</span>
+
+        <h1>Simple Interest</h1>
+
+        <p>Calculate your simple interest</p>
+    </div>
+
+
+    <div class="calculator-type">
+
+        <a href="simple_interest.html" class="type-link active">
+            Simple Interest
+        </a>
+
+        <a href="compound_interest.html" class="type-link">
+            Compound Interest
+        </a>
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="principal">
+            Principal Amount
+        </label>
+
+        <div class="input-box">
+
+            <span>₹</span>
+
+            <input
+                type="number"
+                id="principal"
+                placeholder="Enter principal amount"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="rate">
+            Rate of Interest
+        </label>
+
+        <div class="input-box">
+
+            <input
+                type="number"
+                id="rate"
+                placeholder="Enter interest rate"
+            >
+
+            <span>%</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="time">
+            Time
+        </label>
+
+        <div class="input-box">
+
+            <input
+                type="number"
+                id="time"
+                placeholder="Enter time"
+            >
+
+            <span>Years</span>
+
+        </div>
+
+    </div>
+
+
+    <button class="calculate-btn" onclick="calculateInterest()">
+        Calculate
+    </button>
+
+
+    <button class="reset-btn" onclick="resetCalculator()">
+        Reset
+    </button>
+
+    <div>
+        <p id="error"></p>
+    </div>
+
+    <div class="result" id="result">
+
+        <div class="result-item">
+
+            <span>Interest</span>
+
+            <strong id="interestResult">
+                ₹0.00
+            </strong>
+
+        </div>
+
+
+        <div class="result-item total">
+
+            <span>Total Amount</span>
+
+            <strong id="amountResult">
+                ₹0.00
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="simple_interest.js"></script>
+
+</body>
+</html>
